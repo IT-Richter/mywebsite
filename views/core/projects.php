@@ -8,11 +8,13 @@
         <ul>
             <li>
                 <a href="https://play.google.com/store/apps/details?id=it.liebenow.Waszieheichan&gl=DE"> Was ziehe ich an? Android APP </a>
+                <p>
+                    Geplant und erstellt von mir während meines Praktikums bei <a href="https://www.liebenow.it/"> Liebenow IT</a>
+                </p>
+                <p>
+                    Design und Bilder wurden von einer Kollegin erstellt. Realisiert mit React Native und EXPO
+                </p>
             </li>
-            <p>
-                Geplant und erstellt von mir während meines Praktikums bei <a href="https://www.liebenow.it/"> Liebenow IT</a>
-            </p>
-            <p>Design und Bilder wurden von einer Kollegin erstellt. Realisiert mit React Native und EXPO</p>
             <li>
                 <a href="src/data/Dokumentation_Kai_Richter.pdf">IHK-Abschlussprojekt</a>
                 <p>Meine Dokumentation des IHK-Abschlussprojektes. Realisiert mit Laravel</p>
