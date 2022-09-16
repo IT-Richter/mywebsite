@@ -18,7 +18,7 @@
                 Des Weiteren befinden sich Informationen zu bereits abgeschlossenen Projekten auf der Seite <a href="?page=projects">Projekte</a>.
             </p>
             <br>
-            <img src="../layout/img/kai.jpg" alt="picture of kai richter" >
+            <img src="views/layout/img/kai.jpg" alt="picture of kai richter" >
         </article>
 
     </main>
