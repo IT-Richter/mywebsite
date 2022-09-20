@@ -1,15 +1,21 @@
 <?php
-
 require __DIR__ . "/init.php";
-
 if(!isset($_GET['page'])){
     $controller = $container->make('coreController');
-    $controller->render('core/index', []);
+    header('Location: /mywebsite?page=home');
 }else{
     $routes = [
+        'home' => [
+            'controller' => 'coreController',
+            'method' => 'index'
+        ],
         'projects' => [
             'controller' => 'coreController',
-            'method' => 'projects'
+            'method' => 'show'
+        ],
+        'guestbook' => [
+            'controller' => 'guestbookController',
+            'method' => 'show'
         ]
     ];
     if (isset($routes[$_GET['page']])) {
@@ -18,7 +24,7 @@ if(!isset($_GET['page'])){
         $method = $route['method'];
         $controller->$method();
     }else{
-        header('Location: /mywebsite');
+        die();
     }
 
 }

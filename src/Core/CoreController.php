@@ -4,7 +4,10 @@ namespace App\Core;
 
 class CoreController extends AbstractController
 {
-    public function projects(){
+    public function index(){
+        $this->render('core/index',[]);
+    }
+    public function show(){
         $this->render('core/projects',[]);
 }
 
