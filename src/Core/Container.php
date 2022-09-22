@@ -4,6 +4,9 @@ namespace App\Core;
 
 use App\Guestbook\GuestbookEntryRepository;
 use App\Guestbook\guestbookController;
+use App\User\UsersRepository;
+use App\User\LoginController;
+use App\User\LoginService;
 use PDO;
 use PDOException;
 
@@ -24,6 +27,21 @@ class Container
             },
             'guestbookentryRepository' => function (){
             return new GuestbookEntryRepository($this->make('pdo'));
+            },
+            'usersRepository' => function() {
+                return new UsersRepository(
+                    $this->make("pdo")
+                );
+            },
+            'loginController' => function() {
+                return new LoginController(
+                    $this->make("loginService")
+                );
+            },
+            'loginService' => function() {
+                return new LoginService(
+                    $this->make("usersRepository")
+                );
             },
             'pdo' => function () {
                 try {
