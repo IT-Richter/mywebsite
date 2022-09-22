@@ -23,7 +23,7 @@
         </div>
 
         <div class="container px-5">
-            <img src="views\layout\img\kai.jpg" class="img-fluid border rounded-4 shadow-lg mb-4"
+            <img src="views\layout\img\kai.jpg" class="img-fluid border rounded-circle shadow-lg mb-4"
                  alt="Picture of Kai" width="400" height="200" loading="lazy">
         </div>
 
