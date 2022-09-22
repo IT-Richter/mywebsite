@@ -5,6 +5,10 @@ if(!isset($_GET['page'])){
     header('Location: /mywebsite?page=home');
 }else{
     $routes = [
+        'login' => [
+          'controller' => 'loginController',
+          'method' => 'login'
+        ],
         'home' => [
             'controller' => 'coreController',
             'method' => 'index'
