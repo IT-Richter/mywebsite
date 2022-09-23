@@ -2,8 +2,6 @@
 
 <br/>
 <br/>
-
-
 <main>
     <div class="px-4 py-2 text-center">
         <div class="col-lg-3 mx-auto">
