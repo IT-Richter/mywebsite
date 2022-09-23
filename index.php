@@ -1,5 +1,6 @@
 <?php
 require __DIR__ . "/init.php";
+session_start();
 if(!isset($_GET['page'])){
     $controller = $container->make('coreController');
     header('Location: /mywebsite?page=home');
