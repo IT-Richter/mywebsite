@@ -1,6 +1,4 @@
 <?php
-
-
 /**
  * An example of a project-specific implementation.
  *
@@ -13,6 +11,7 @@
  * @param string $class The fully-qualified class name.
  * @return void
  */
+
 spl_autoload_register(function ($class) {
 
     // project-specific namespace prefix

@@ -1,5 +1,4 @@
 <?php
-
 require __DIR__ . "/autoload.php";
 
 function e($str)
@@ -8,6 +7,3 @@ function e($str)
 }
 
 $container = new App\Core\Container();
-
-
-
