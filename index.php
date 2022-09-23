@@ -6,6 +6,10 @@ if(!isset($_GET['page'])){
     header('Location: /mywebsite?page=home');
 }else{
     $routes = [
+        'logout' => [
+            'controller' => 'loginController',
+            'method' => 'logout'
+        ],
         'login' => [
           'controller' => 'loginController',
           'method' => 'login'
@@ -29,7 +33,7 @@ if(!isset($_GET['page'])){
         $method = $route['method'];
         $controller->$method();
     }else{
-        die();
+        header('Location: /mywebsite?page=home');
     }
 
 }
