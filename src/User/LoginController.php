@@ -22,12 +22,17 @@ class LoginController extends AbstractController
     public function logout()
     {
         $this->loginService->logout();
-        header('Location: /mywebsite?page=login');
+        $this->render("user/login", [
+            'message' => "Sie haben sich erfolgreich ausgelogt!"
+        ]);
     }
 
     public function login()
     {
-        $error = false;
+        $message = "0";
+        if(!empty($_POST)){
+            $message = "Bitte Benutzernamen und Password eingeben";
+        }
         if (!empty($_POST['username']) AND !empty($_POST['password'])) {
             $username = $_POST['username'];
             $password = $_POST['password'];
@@ -36,12 +41,12 @@ class LoginController extends AbstractController
                 header('Location: /mywebsite?page=daschboard');
                 return;
             } else {
-                $error = true;
+                $message = "Benutzername und/oder Password inkorrekt";
             }
         }
 
         $this->render("user/login", [
-            'error' => $error
+            'message' => $message
         ]);
     }
 }
