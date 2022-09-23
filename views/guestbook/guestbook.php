@@ -5,11 +5,6 @@
         <div class="col-lg-6 mx-auto mt-4">
             <form method="post" action="">
                 <div class="form-group mt-3">
-                    <?php
-                    if (!empty($message)) {
-                        echo "<div class='alert alert-warning'><strong>$message</strong></div>";
-                    }
-                    ?>
                     <label for="author" class="control-label col-md-3">Namen eingeben:</label>
                     <input id="author" name="author" class="form-control">
                 </div>
