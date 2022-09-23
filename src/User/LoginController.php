@@ -13,12 +13,6 @@ class LoginController extends AbstractController
         $this->loginService = $loginService;
     }
 
-    public function dashboard()
-    {
-        $this->loginService->check();
-        $this->render("user/dashboard", []);
-    }
-
     public function logout()
     {
         $this->loginService->logout();
