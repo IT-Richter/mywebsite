@@ -23,7 +23,7 @@ class LoginController extends AbstractController
     {
         $this->loginService->logout();
         $this->render("user/login", [
-            'message' => "Sie haben sich erfolgreich ausgelogt!"
+            'message' => "Sie haben sich erfolgreich ausgeloggt!"
         ]);
     }
 
@@ -38,7 +38,9 @@ class LoginController extends AbstractController
             $password = $_POST['password'];
 
             if ($this->loginService->attempt($username, $password)) {
-                header('Location: /mywebsite?page=daschboard');
+                $this->render("core/index", [
+                    'message' => "Sie haben sich erfolgreich eingeloggt!"
+                ]);
                 return;
             } else {
                 $message = "Benutzername und/oder Password inkorrekt";

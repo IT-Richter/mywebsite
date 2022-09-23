@@ -6,12 +6,7 @@
 
 <main>
     <div class="px-4 py-2 text-center">
-        <div class="col-lg-3 mx-auto mt-4">
-            <?php if (!empty($message)): ?>
-                <p class="p-2 mb-4 bg-warning text-dark rounded">
-                    <?php echo $message;?>
-                </p>
-            <?php endif; ?>
+        <div class="col-lg-3 mx-auto">
             <form method="POST" class="form-horizontal">
                 <!-- Email input -->
                 <div class="form-outline mb-4">

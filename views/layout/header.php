@@ -27,3 +27,8 @@
         </ul>
     </header>
 </div>
+<?php if (!empty($message)): ?>
+<p class="col-lg-5 p-2 mb-4 mx-auto bg-warning text-dark rounded text-center">
+    <?php echo $message;?>
+</p>
+<?php endif; ?>
