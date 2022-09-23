@@ -17,6 +17,13 @@
             <li class="nav-item"><a href="?page=home" class=<?php echo $_GET['page'] == 'home' ?  '"active nav-link"' :   '"nav-link"'?>>Home</a></li>
             <li class="nav-item"><a href="?page=projects" class=<?php echo $_GET['page'] == 'projects' ?  '"active nav-link"' :   '"nav-link"'?>>Projekte</a></li>
             <li class="nav-item"><a href="?page=guestbook" class=<?php echo $_GET['page'] == 'guestbook' ?  '"active nav-link"' :   '"nav-link"'?>>Gästebuch</a></li>
+            <?php if(empty($_SESSION)): ?>
+                <li class="nav-item"><a href="?page=login" class=<?php echo $_GET['page'] == 'login' ?  '"active nav-link"' :   '"nav-link"'?>>Login</a></li>
+            <?php endif; ?>
+            <?php if(!empty($_SESSION)): ?>
+                <li class="nav-item"><a href="?page=logout" class=<?php echo $_GET['page'] == 'logout' ?  '"active nav-link"' :   '"nav-link"'?>>Logout</a></li>
+            <?php endif;?>
+
         </ul>
     </header>
 </div>
