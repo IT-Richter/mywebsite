@@ -4,6 +4,7 @@ session_start();
 if(!isset($_GET['page'])){
     $controller = $container->make('coreController');
     header('Location: /mywebsite?page=home');
+    die();
 }else{
     $routes = [
         'logout' => [
@@ -34,6 +35,7 @@ if(!isset($_GET['page'])){
         $controller->$method();
     }else{
         header('Location: /mywebsite?page=home');
+        die();
     }
 
 }
